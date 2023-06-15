@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+    {% filter upper %}
+        <p>Main page 2</p>
+    {% endfilter %}
+         <button class="btn btn-warning"> {% filter upper %}On contact page{% endfilter %}</button>
+    {% for el in values %}
+        <p> {{ el }}</p>
+    {% endfor %}
+        {% for el in obj  %}
+            <p> {{ el  }}</p>
+    {% endfor %}
+    </div>
+{% endblock %}
